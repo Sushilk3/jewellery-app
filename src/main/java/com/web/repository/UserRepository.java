@@ -1,0 +1,11 @@
+package com.web.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.web.model.User;
+
+public interface UserRepository extends JpaRepository<User, Integer>{
+	
+	public User findByEmailAndPassword(String email,String password);
+
+}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
+<!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
+<!--[if !IE]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- start: META -->
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="Responsive Admin Template build with Twitter Bootstrap and jQuery" name="description" />
+    <meta content="ClipTheme" name="author" />
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Raleway:400,100,200,300,500,600,700,800,900/" />
+    <link type="text/css" rel="stylesheet" th:href="@{/bower_components/bootstrap/dist/css/bootstrap.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/bower_components/font-awesome/css/font-awesome.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/assets/fonts/clip-font.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/bower_components/iCheck/skins/all.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/bower_components/perfect-scrollbar/css/perfect-scrollbar.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/bower_components/sweetalert/dist/sweetalert.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/assets/css/main.min.css}"/>
+    <link type="text/css" rel="stylesheet" th:href="@{/assets/css/main-responsive.min.css}"/>
+    <link type="text/css" rel="stylesheet" media="print" th:href="@{/assets/css/print.min.css}"/>
+    <link type="text/css" rel="stylesheet" id="skin_color" th:href="@{/assets/css/theme/light.min.css}"/>
+
+    <!-- end: MAIN CSS -->
+    <!-- start: CSS REQUIRED FOR THIS PAGE ONLY -->
+    <link th:href="@{/bower_components/fullcalendar/dist/fullcalendar.min.css}" rel="stylesheet" />
+    <!-- end: CSS REQUIRED FOR THIS PAGE ONLY -->
+</head>
+
+<body>
+
+    <!-- start: HEADER -->
+    <div th:replace="fragments/header :: header">...</div>
+    <!-- end: HEADER -->
+    <!-- start: MAIN CONTAINER -->
+    <div class="main-container">
+        <div class="navbar-content">
+            <!-- start: SIDEBAR -->
+            
+            <div th:replace="fragments/sidebar :: sidebar">...</div>
+            
+            <!-- end: SIDEBAR -->
+        </div>
+
+        <!-- start: PAGE -->
+        <div class="main-content">
+               <!-- end: SPANEL CONFIGURATION MODAL FORM -->
+            <div class="container">
+                <!-- start: PAGE HEADER -->
+                <div class="row">
+                    <div class="col-sm-12">
+                       
+                        <!-- start: PAGE TITLE & BREADCRUMB -->
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="clip-home-3"></i>
+                                <a th:href="@{/dashboard}">
+                                    Dashboard
+                                </a>
+                            </li>
+                            <li class="active">
+                                  Market Rate
+                            </li>
+                           
+                        </ol>
+                        <div class="page-header">
+                           <marquee> <h1>Gold 23 Karat - 30000  ,   Gold 24 Karat - 36000  ,   Gold 916 KD - 26000 &amp; Silver - 5000 &amp; Diamond - 500000 &amp; Platinum - 40000  </h1></marquee>
+                        </div>
+                        <!-- end: PAGE TITLE & BREADCRUMB -->
+                    </div>
+                </div>
+                
+                
+               <div class="row">
+                    <div class="row">
+                    <div class="col-sm-5">
+                        <!-- start: TEXT AREA PANEL -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="fa fa-external-link-square"></i> Todays Rate
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-expand" href="#">
+                                        <i class="fa fa-resize-full"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                               
+                                  <div class="form-group">
+								  <div id="step-1">
+                                            <h3 class="StepTitle">Gold</h3>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">
+                                                    &nbsp; &nbsp; &nbsp; 23 Karat <span class="symbol required"></span>
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" id="username" name="username" placeholder="Text Field">
+                                                </div>
+                                            </div>
+											
+											<br>
+											<br>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">
+                                                   &nbsp; &nbsp; &nbsp; 24 Karat <span class="symbol required"></span>
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" id="username" name="username" placeholder="Text Field">
+                                                </div>
+                                            </div>
+											<br>
+											<br>
+                                            <div class="form-group">
+                                                <label class="col-sm-4 control-label">
+                                                    &nbsp; &nbsp; &nbsp; 916 KD <span class="symbol required"></span>
+                                                </label>
+                                                <div class="col-sm-7">
+                                                    <input type="text" class="form-control" id="username" name="username" placeholder="Text Field">
+                                                </div>
+                                            </div>
+                                           
+                                           
+                                        </div>	
+										<br>
+										<br>
+										<label class="col-sm-4 control-label">
+                                         <b>   SILVER</b>
+                                        </label>
+										
+										<div class="col-sm-7">
+                                            <span class="input-icon input-icon-right">
+                                                <input type="text" placeholder="Text Field" id="form-field-17" class="form-control">
+                                                <i class="fa fa-rocket"></i>
+                                            </span>
+                                        </div>
+										<br>
+										<br>
+										<label class="col-sm-4 control-label">
+                                           <b> DIAMOND</b>
+                                        </label>
+										
+										<div class="col-sm-7">
+                                            <span class="input-icon input-icon-right">
+                                                <input type="text" placeholder="Text Field" id="form-field-17" class="form-control">
+                                                <i class="fa fa-rocket"></i>
+                                            </span>
+                                        </div>
+										<br>
+										
+										<br>
+										<label class="col-sm-4 control-label">
+                                         <b>  PLATINUM</b>
+                                        </label>
+										
+										<div class="col-sm-7">
+                                            <span class="input-icon input-icon-right">
+                                                <input type="text" placeholder="Text Field" id="form-field-17" class="form-control">
+                                                <i class="fa fa-rocket"></i>
+                                            </span>
+                                        </div>
+										
+										<br>
+										<br>
+										<br>
+										<div class="col-sm-12 center">
+										<button type="button" class="btn btn-success" >
+                                        Save
+                                    </button>
+									</div>
+										
+                                    </div>
+									
+                                
+                                
+                            </div>
+                        </div>
+                        <!-- end: TEXT AREA PANEL -->
+                    </div>
+                   
+                
+					<div class="col-sm-7">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <i class="clip-stats"></i> Rate Chart
+                                <div class="panel-tools">
+                                    <a class="btn btn-xs btn-link panel-collapse collapses" href="#">
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-config" href="#panel-config" data-toggle="modal">
+                                        <i class="fa fa-wrench"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-refresh" href="#">
+                                        <i class="fa fa-refresh"></i>
+                                    </a>
+                                    <a class="btn btn-xs btn-link panel-close" href="#">
+                                        <i class="fa fa-times"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                <div class="flot-medium-container">
+                                    <div id="placeholder-h1" class="flot-placeholder"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					</div>
+                </div>
+               
+                <!-- end: PAGE CONTENT-->
+           
+       
+        <!-- end: PAGE -->
+    </div>
+    <!-- end: MAIN CONTAINER -->
+    <!-- start: FOOTER -->
+    <div th:replace="fragments/footer :: footer">...</div>
+    <!-- end: FOOTER -->
+    
+    
+    <!-- start: MAIN JAVASCRIPTS -->
+    <!--[if lt IE 9]>
+        <script th:src="@{/bower_components/respond/dest/respond.min.js}"></script>
+        <script th:src="@{/bower_components/Flot/excanvas.min.js}"></script>
+        <script th:src="@{/bower_components/jquery-1.x/dist/jquery.min.js}"></script>
+        <![endif]-->
+    <!--[if gte IE 9]><!-->
+    <script type="text/javascript" th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
+    <!--<![endif]-->
+
+    <script type="text/javascript" th:src="@{/bower_components/jquery-ui/jquery-ui.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/blockUI/jquery.blockUI.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/iCheck/icheck.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/perfect-scrollbar/js/min/perfect-scrollbar.jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/jquery.cookie/jquery.cookie.js}"></script>
+    <script type="text/javascript" th:src="@{/bower_components/sweetalert/dist/sweetalert.min.js}"></script>
+    <script type="text/javascript" th:src="@{/assets/js/min/main.min.js}"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+    <script th:src="@{/bower_components/Flot/jquery.flot.js}"></script>
+    <script th:src="@{/bower_components/Flot/jquery.flot.pie.js}"></script>
+    <script th:src="@{/bower_components/Flot/jquery.flot.resize.js}"></script>
+    <script th:src="@{/assets/plugin/jquery.sparkline.min.js}"></script>
+    <script th:src="@{/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js}"></script>
+    <script th:src="@{/bower_components/jqueryui-touch-punch/jquery.ui.touch-punch.min.js}"></script>
+    <script th:src="@{/bower_components/moment/min/moment.min.js}"></script>
+    <script th:src="@{/bower_components/fullcalendar/dist/fullcalendar.min.js}"></script>
+    <script th:src="@{/assets/js/min/index.min.js}"></script>
+    <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+
+    <script>
+        jQuery(document).ready(function() {
+            Main.init();
+            Index.init();
+        });
+    </script>
+
+</body>
+
+
+</html>

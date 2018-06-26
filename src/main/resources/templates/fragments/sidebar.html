@@ -1,0 +1,67 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    
+    
+    
+<div class="main-navigation navbar-collapse collapse" th:fragment="sidebar">
+                <!-- start: MAIN MENU TOGGLER BUTTON -->
+                <div class="navigation-toggler">
+                    <i class="clip-chevron-left"></i>
+                    <i class="clip-chevron-right"></i>
+                </div>
+                <!-- end: MAIN MENU TOGGLER BUTTON -->
+                <!-- start: MAIN NAVIGATION MENU -->
+                <ul class="main-navigation-menu">
+                    <li class="active open">
+                        <!--active open-->
+                        <a th:href="@{/dashboard}">
+                            <i class="clip-home-3"></i>
+                            <span class="title"> Dashboard </span><span class="selected"></span>
+                        </a>
+                    </li>
+					<li>
+                        <!--active open-->
+                        <a th:href="@{/stock}">
+                          
+						   <i class="clip-key-3"></i>
+                            <span class="title"> Stock </span><span class="selected"></span>
+                        </a>
+                    </li>
+                   <li>
+                        <!--active open-->
+                        <a th:href="@{/mortgage}">
+                            <i class="clip-balance"></i>
+                            <span class="title"> Mortgage </span><span class="selected"></span>
+                        </a>
+                    </li>
+                   <li>
+                        <!--active open-->
+                        <a th:href="@{/Selling}">
+                            <i class="clip-home-3"></i>
+                            <span class="title"> Selling </span><span class="selected"></span>
+                        </a>
+                    </li>
+					 <li>
+                        <!--active open-->
+                        <a th:href="@{/reports}">
+                            <i class="clip-stats"></i>
+                            <span class="title"> Reports </span><span class="selected"></span>
+                        </a>
+                    </li>
+					
+					 <li>
+                        <!--active open-->
+                        <a th:href="@{/invoice}">
+                            <i class="clip-paste"></i>
+                            <span class="title"> Invoice </span><span class="selected"></span>
+                        </a>
+                    </li>
+                   
+                   
+                </ul>
+                <!-- end: MAIN NAVIGATION MENU -->
+            </div>
+            </html>

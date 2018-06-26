@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<div class="navbar navbar-inverse navbar-fixed-top" th:fragment="header">
+        <!-- start: TOP NAVIGATION CONTAINER -->
+        <div class="container">
+            <div class="navbar-header">
+                <!-- start: RESPONSIVE MENU TOGGLER -->
+                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                <span class="clip-list-2"></span>
+            </button>
+                <!-- end: RESPONSIVE MENU TOGGLER -->
+                <!-- start: LOGO -->
+                <a class="navbar-brand" th:href="@{/dashboard}">
+                Jewellery<i class="clip-clip"></i>Shop
+            </a>
+                <!-- end: LOGO -->
+            </div>
+            <div class="navbar-tools">
+                <!-- start: TOP NAVIGATION MENU -->
+                <ul class="nav navbar-right">
+                    <!-- start: TO-DO DROPDOWN -->
+                    
+                     
+                    <!-- end: MESSAGE DROPDOWN -->
+                    <!-- start: USER DROPDOWN -->
+                    <li class="dropdown current-user">
+                        <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" data-close-others="true" href="#">
+                            <img th:src="@{/assets/images/avatar-1-small.jpg}" class="circle-img" alt="">
+                            <span class="username">Demo User</span>
+                            <i class="clip-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="pages_user_profile.html">
+                                    <i class="clip-user-2"></i> &nbsp;My Profile
+                                </a>
+                            </li>
+                            
+                                <li>
+                                    <a th:href="@{/home}">
+                                        <i class="clip-exit"></i> &nbsp;Log Out
+                                    </a>
+                                </li>
+                        </ul>
+                        </li>
+                        <!-- end: USER DROPDOWN -->
+                        <!-- start: PAGE SIDEBAR TOGGLE -->
+                        <li>
+                            <a class="sb-toggle" href="#"><i class="fa fa-outdent"></i></a>
+                        </li>
+                        <!-- end: PAGE SIDEBAR TOGGLE -->
+                </ul>
+                <!-- end: TOP NAVIGATION MENU -->
+            </div>
+        </div>
+        <!-- end: TOP NAVIGATION CONTAINER -->
+    </div>
+    </html>
