@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,10 +26,10 @@ public class LoginController {
 	private UserService userService;
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public ResponseEntity<Object> Login(@ModelAttribute("user") User user, ModelMap modelMap) {
+	public ResponseEntity<Object> Login(@RequestBody User user) {
 
 		logger.info("Login User {}", user);
-
+	
 		User currentUser = userService.findUserByEmailandPassword(user.getEmail(), user.getPassword());
 
 		if (currentUser == null) {
