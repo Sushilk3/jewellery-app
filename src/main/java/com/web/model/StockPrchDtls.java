@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "stock_purchase_details	")
-public class StockPurchaseDetails {
+public class StockPrchDtls {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,7 +30,7 @@ public class StockPurchaseDetails {
 	@Column(name = "category")
 	private String category;
 
-	@Column(name = "subCategory")
+	@Column(name = "sub_category")
 	private String subCategory;
 
 	
@@ -169,7 +169,7 @@ public class StockPurchaseDetails {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		StockPurchaseDetails other = (StockPurchaseDetails) obj;
+		StockPrchDtls other = (StockPrchDtls) obj;
 		if (Double.doubleToLongBits(amountPaid) != Double.doubleToLongBits(other.amountPaid))
 			return false;
 		if (Double.doubleToLongBits(billAmount) != Double.doubleToLongBits(other.billAmount))

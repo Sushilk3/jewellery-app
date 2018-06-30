@@ -11,22 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.web.model.Stock;
-import com.web.model.StockPurchaseDetails;
-import com.web.services.StockPurchaseDetailsService;
-import com.web.services.StockService;
+import com.web.model.StockPrchDtls;
+import com.web.services.StockPrchDtlsService;
 import com.web.util.CustomErrorType;
 
 @RestController
 @RequestMapping("/stockPurchaseDetails")
-public class StockPurchaseDetailsController {
+public class StockPrchDtlsController {
 	
 
 	public static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 	
 	
 	@Autowired
-	private StockPurchaseDetailsService stockPurchaseDetailsService;
+	private StockPrchDtlsService stockPurchaseDetailsService;
 
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -34,7 +32,7 @@ public class StockPurchaseDetailsController {
 
 		logger.info("stockPurchaseDetails list ");
 	
-		List<StockPurchaseDetails> stockPurchaseDetailsList = stockPurchaseDetailsService.stockPurchaseDetailsList();
+		List<StockPrchDtls> stockPurchaseDetailsList = stockPurchaseDetailsService.stockPurchaseDetailsList();
 
 		if (stockPurchaseDetailsList.size() == 0) {
 			logger.error("stockPurchaseDetails not found ");
