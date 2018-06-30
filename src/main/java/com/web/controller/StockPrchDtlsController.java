@@ -16,7 +16,7 @@ import com.web.services.StockPrchDtlsService;
 import com.web.util.CustomErrorType;
 
 @RestController
-@RequestMapping("/stockPurchaseDetails")
+@RequestMapping("/stockPrchDtls")
 public class StockPrchDtlsController {
 	
 
@@ -24,18 +24,18 @@ public class StockPrchDtlsController {
 	
 	
 	@Autowired
-	private StockPrchDtlsService stockPurchaseDetailsService;
+	private StockPrchDtlsService stockPrchDtlsService;
 
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public ResponseEntity<Object> stockList() {
 
-		logger.info("stockPurchaseDetails list ");
+		logger.info("stockPrchDtls list ");
 	
-		List<StockPrchDtls> stockPurchaseDetailsList = stockPurchaseDetailsService.stockPurchaseDetailsList();
+		List<StockPrchDtls> stockPurchaseDetailsList = stockPrchDtlsService.stockPurchaseDetailsList();
 
 		if (stockPurchaseDetailsList.size() == 0) {
-			logger.error("stockPurchaseDetails not found ");
+			logger.error("sstockPrchDtls Data not found ");
 			return new ResponseEntity<Object>(new CustomErrorType("stock not found "),
 					HttpStatus.OK);
 		}
