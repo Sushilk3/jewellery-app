@@ -30,6 +30,18 @@ public class StockPurchaseDetails {
 	@Column(name = "category")
 	private String category;
 
+	@Column(name = "subCategory")
+	private String subCategory;
+
+	
+	public String getSubCategory() {
+		return subCategory;
+	}
+
+	public void setSubCategory(String subCategory) {
+		this.subCategory = subCategory;
+	}
+
 	@Column(name = "item")
 	private String item;
 

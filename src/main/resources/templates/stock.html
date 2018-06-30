@@ -42,11 +42,12 @@
 <link th:href="@{/bower_components/bootstrap-modal/css/bootstrap-modal-bs3patch.css}" rel="stylesheet" />
     <link th:href="@{/bower_components/bootstrap-modal/css/bootstrap-modal.css}" rel="stylesheet" />
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	
 
 </head>
 
-<body>
+<body ng-app="stockPurchaseApp" ng-controller="stockPurchaseCtrl">
 
     <!-- start: HEADER -->
     <div th:replace="fragments/header :: header">...</div>
@@ -156,17 +157,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>123xx</td>
-                                            <td>xxxx</td>
-                                            <td>Gold</td>
-                                            <td>Ladies</td>
-											<td>Ring</td>
-                                            <td>23 krt</td>
-                                            <td>10</td>
-                                            <td>2</td>
-											<td>1234</td>
-                                            <td>12</td>
+                                        <tr ng-repeat="x in stockPurchaseList">
+                                            <td>{{x.invoiceNo}}</td>
+                                            <td>{{x.vendorName}}</td>
+                                            <td>{{x.category}}</td>
+                                            <td>{{x.subCategory}}</td>
+											<td>{{x.item}}</td>
+                                            <td>{{x.carat}}</td>
+                                            <td>{{x.weight}}</td>
+                                            <td>{{x.quantity}}</td>
+											<td>{{x.billAmount}}</td>
+                                            <td>{{x.amountPaid}}</td>
                                         </tr>
                                         
                                     </tbody>
@@ -352,6 +353,10 @@
     
     <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 <script th:src="@{/assets/js/min/ui-modals.min.js}"></script>
+
+
+<script type="text/javascript" th:src="@{/app-js/stock.js}"></script>
+   <script type="text/javascript" th:src="@{/app-js/stockPurchase.js}"></script>
     <script>
         jQuery(document).ready(function() {
             Main.init();
